@@ -1,0 +1,301 @@
+/* ==========================================================================
+   Global & Typography
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #212529;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Offset fixed navbar when scrolling to anchor targets */
+section[id] {
+  scroll-margin-top: 76px;
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand {
+  letter-spacing: 0.02em;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero-section {
+  min-height: 100vh;
+  padding-top: 76px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #eef4ff 100%);
+}
+
+.hero-greeting {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.profile-image-wrapper {
+  max-width: 320px;
+  position: relative;
+}
+
+.profile-image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  z-index: 0;
+}
+
+.profile-image {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 24px rgba(13, 110, 253, 0.2);
+}
+
+/* ==========================================================================
+   Section Utilities
+   ========================================================================== */
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-heading .section-subtitle {
+  max-width: 560px;
+}
+
+/* ==========================================================================
+   Project Cards
+   ========================================================================== */
+
+.project-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12) !important;
+}
+
+.project-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card .badge {
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.4em 0.65em;
+}
+
+/* ==========================================================================
+   Skills & Progress Bars
+   ========================================================================== */
+
+.progress {
+  height: 10px;
+  border-radius: 50px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  border-radius: 50px;
+  transition: width 1s ease-in-out;
+}
+
+.skill-item .fw-medium {
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Timeline
+   ========================================================================== */
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background-color: #dee2e6;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #0d6efd;
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-content {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: 3px solid #0d6efd;
+}
+
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+
+.contact-info-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e9ecef;
+}
+
+.contact-info-list a:hover {
+  color: #0d6efd !important;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+#contactForm .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+#contactForm .btn-primary {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contactForm .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.35);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-social-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 4rem;
+  }
+
+  .hero-section .display-3 {
+    font-size: calc(1.5rem + 2vw);
+  }
+
+  .profile-image-wrapper {
+    max-width: 220px;
+    margin-bottom: 1rem;
+  }
+
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section .btn-lg {
+    width: 100%;
+  }
+
+  .hero-section .d-flex.flex-wrap.gap-3 {
+    flex-direction: column;
+  }
+}
